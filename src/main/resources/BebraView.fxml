@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="615.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+   <top>
+      <GridPane alignment="CENTER" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="328.0" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+          <ColumnConstraints fillWidth="false" halignment="RIGHT" maxWidth="381.0" minWidth="10.0" prefWidth="200.0" />
+          <ColumnConstraints fillWidth="false" halignment="RIGHT" maxWidth="218.0" minWidth="10.0" prefWidth="128.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="КОД" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label text="по ОКПО" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Label>
+            <Label text="Вид деятельности по ОКПД" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Label>
+            <Label text="Вид операции" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="АКТ №">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField />
+                  <Label alignment="CENTER" text="ОТ">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="actDatePicker" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </HBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="О РЕАЛИЗАЦИИ И ОТПУСКЕ ИЗДЕЛИЙ КУХНИ" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+            <Label text="организация" GridPane.rowIndex="2" />
+            <Label text="структурное подразделение" GridPane.rowIndex="4" />
+            <ComboBox editable="true" maxWidth="1.7976931348623157E308" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <ComboBox editable="true" maxWidth="1.7976931348623157E308" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn prefWidth="32.0" />
+            <TableColumn prefWidth="75.0" text="Готовое изделие">
+               <columns>
+                <TableColumn prefWidth="75.0" text="Наименование" />
+                <TableColumn prefWidth="75.0" text="Код" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Цена продажи" />
+            <TableColumn prefWidth="380.0" text="Реализовано и отпущено по ценам продажи">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="За наличный расчет">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="Количество" />
+                        <TableColumn prefWidth="75.0" text="Сумма" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="отпущено буфетам и мелкорозничной сети">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="Количество" />
+                        <TableColumn prefWidth="75.0" text="Сумма" />
+                     </columns></TableColumn>
+                  <TableColumn prefWidth="75.0" text="Работникам организации">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="Количество" />
+                        <TableColumn prefWidth="75.0" text="Сумма" />
+                     </columns></TableColumn>
+                  <TableColumn prefWidth="75.0" text="Всего">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="Количество" />
+                        <TableColumn prefWidth="75.0" text="Сумма" />
+                     </columns></TableColumn>
+               </columns></TableColumn>
+            <TableColumn prefWidth="75.0" text="По учетным ценам производства">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="Цена" />
+                  <TableColumn prefWidth="75.0" text="Сумма" />
+               </columns>
+            </TableColumn>
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <BorderPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#openSignatures" text="Расшифровка подписей">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin></Button>
+            <Button mnemonicParsing="false" text="Экспорт в Excel" />
+         </children></HBox>
+   </bottom>
+</BorderPane>
