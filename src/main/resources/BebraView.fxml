@@ -104,39 +104,39 @@
                       <TableColumn prefWidth="75.0" text="Код" />
                      </columns>
                   </TableColumn>
-                  <TableColumn prefWidth="75.0" text="Цена&#10;продажи" />
+                  <TableColumn prefWidth="75.0" text="Цена&#10;продажи,&#10;руб. коп." />
                   <TableColumn prefWidth="380.0" text="Реализовано и отпущено по ценам продажи">
                      <columns>
                         <TableColumn prefWidth="75.0" text="За наличный расчет&#10; ">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="Количество" />
-                              <TableColumn prefWidth="75.0" text="Сумма" />
+                              <TableColumn prefWidth="75.0" text="Количество, шт." />
+                              <TableColumn prefWidth="75.0" text="Сумма, руб. коп." />
                            </columns>
                         </TableColumn>
                         <TableColumn prefWidth="75.0" text="отпущено буфетам и &#10;мелкорозничной сети">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="Количество" />
-                              <TableColumn prefWidth="75.0" text="Сумма" />
+                              <TableColumn prefWidth="75.0" text="Количество, шт." />
+                              <TableColumn prefWidth="75.0" text="Сумма, руб. коп." />
                            </columns>
                         </TableColumn>
                         <TableColumn prefWidth="75.0" text="Работникам&#10;организации">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="Количество" />
-                              <TableColumn prefWidth="75.0" text="Сумма" />
+                              <TableColumn prefWidth="75.0" text="Количество, шт." />
+                              <TableColumn prefWidth="75.0" text="Сумма, руб. коп." />
                            </columns>
                         </TableColumn>
                         <TableColumn prefWidth="75.0" text="Всего&#10; ">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="Количество" />
-                              <TableColumn prefWidth="75.0" text="Сумма" />
+                              <TableColumn prefWidth="75.0" text="Количество, шт." />
+                              <TableColumn prefWidth="75.0" text="Сумма, руб. коп." />
                            </columns>
                         </TableColumn>
                      </columns>
                   </TableColumn>
                   <TableColumn prefWidth="75.0" text="По учетным ценам производства">
                      <columns>
-                        <TableColumn prefWidth="75.0" text="Цена" />
-                        <TableColumn prefWidth="75.0" text="Сумма" />
+                        <TableColumn prefWidth="75.0" text="Цена, руб. коп." />
+                        <TableColumn prefWidth="75.0" text="Сумма, руб. коп." />
                      </columns>
                   </TableColumn>
               </columns>
@@ -144,33 +144,57 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <GridPane alignment="CENTER">
+            <GridPane alignment="CENTER_LEFT">
                <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="10.0" />
+                  <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="10.0" prefWidth="124.0" />
+                  <ColumnConstraints fillWidth="false" hgrow="ALWAYS" maxWidth="-Infinity" minWidth="10.0" prefWidth="57.0" />
+                  <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="10.0" prefWidth="55.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="84.0" minWidth="10.0" prefWidth="65.0" />
                </columnConstraints>
                <rowConstraints>
                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Label text="Получено за приготовление блюд из продуктов посетителей" textAlignment="CENTER" wrapText="true" GridPane.halignment="LEFT" />
-                  <TextField GridPane.columnIndex="1" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="руб." GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-                  <TextField GridPane.columnIndex="3" />
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="коп." GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+                  <Label text="Получено за приготовление блюд из продуктов посетителей" textAlignment="CENTER" wrapText="true" GridPane.halignment="LEFT">
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin></Label>
+                  <TextField GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></TextField>
+                  <Label contentDisplay="CENTER" text="руб." GridPane.columnIndex="2" GridPane.halignment="LEFT">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin></Label>
+                  <TextField prefWidth="310.0" GridPane.columnIndex="3" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="коп." GridPane.columnIndex="4" GridPane.halignment="LEFT">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></Label>
                   <Label text="Итого реализовано, отпущено и оказано услуг за отчетный день" textAlignment="CENTER" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="1">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
                   </Label>
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label text="руб." GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></TextField>
+                  <Label text="руб." GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></Label>
                   <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Label text="коп." GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label text="коп." GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></Label>
                </children>
                <VBox.margin>
                   <Insets bottom="10.0" top="10.0" />
@@ -192,13 +216,13 @@
                   </HBox>
                   <GridPane>
                     <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="45.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="185.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="10.0" prefWidth="170.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="128.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="10.0" prefWidth="55.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -206,17 +230,44 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label text="\% к обороту на сумму" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        <Label text="\% к обороту на сумму" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="0">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="10.0" />
+                           </GridPane.margin></Label>
                         <Label text="специй" GridPane.rowIndex="0" />
                         <Label text="соли" GridPane.rowIndex="1" />
-                        <Label text="Итого" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Label text="\% к обороту на сумму" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Label text="руб." GridPane.columnIndex="4" GridPane.rowIndex="0" />
-                        <Label text="руб." GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                        <Label text="руб." GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                        <Label text="коп." GridPane.columnIndex="6" GridPane.rowIndex="0" />
-                        <Label text="коп." GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                        <Label text="коп." GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                        <Label text="Итого" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="\% к обороту на сумму" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="руб." GridPane.columnIndex="4" GridPane.rowIndex="0">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="руб." GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="руб." GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="коп." GridPane.columnIndex="6" GridPane.rowIndex="0">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="коп." GridPane.columnIndex="6" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
+                        <Label text="коп." GridPane.columnIndex="6" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Label>
                         <TextField prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                         <TextField GridPane.columnIndex="3" GridPane.rowIndex="0" />
                         <TextField GridPane.columnIndex="5" GridPane.rowIndex="0" />
@@ -240,11 +291,29 @@
             </VBox>
             <HBox prefWidth="200.0">
                <children>
-                  <Label text="Выручка кассы" />
-                  <TextField />
-                  <Label text="руб." />
-                  <TextField />
-                  <Label text="коп." />
+                  <Label text="Выручка кассы">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="2.0" />
+                     </padding></Label>
+                  <TextField alignment="CENTER" maxWidth="-Infinity" prefWidth="128.0" />
+                  <Label text="руб.">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="2.0" />
+                     </padding></Label>
+                  <TextField maxWidth="-Infinity" prefWidth="55.0" />
+                  <Label text="коп.">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="2.0" />
+                     </padding></Label>
                </children>
                <padding>
                   <Insets bottom="10.0" top="10.0" />
@@ -261,8 +330,8 @@
                      </padding></Label>
                   <GridPane>
                     <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="394.0" minWidth="10.0" prefWidth="255.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="548.0" minWidth="10.0" prefWidth="548.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="310.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="548.0" />
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -275,12 +344,24 @@
                         <Label text="Сумма реализованного наложения за день" GridPane.rowIndex="2" />
                         <Label text="Заборные листы №№" GridPane.rowIndex="1" />
                         <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
                            <children>
-                              <TextField />
-                              <Label text="руб." />
-                              <TextField />
-                              <Label text="коп." />
+                              <TextField HBox.hgrow="ALWAYS" />
+                              <Label text="руб.">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding></Label>
+                              <TextField maxWidth="-Infinity" prefWidth="55.0" />
+                              <Label text="коп.">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets top="3.0" />
+                                 </padding></Label>
                            </children>
                         </HBox>
                      </children>
