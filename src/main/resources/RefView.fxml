@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <VBox prefHeight="397.0" prefWidth="600.0">
+            <children>
+                <HBox>
+                    <children>
+                        <Label text="СПРАВКА">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label text=": Израсходовано на приготовление блюд" />
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                </HBox>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="55.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="10.0" prefWidth="170.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="128.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="-Infinity" minWidth="10.0" prefWidth="50.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="NEVER" minWidth="10.0" prefWidth="55.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="\% к обороту на сумму" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="0">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="специй" GridPane.rowIndex="0" />
+                        <Label text="соли" GridPane.rowIndex="1" />
+                        <Label text="Итого" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets right="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="\% к обороту на сумму" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="5.0" right="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="руб." GridPane.columnIndex="4" GridPane.rowIndex="0">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="руб." GridPane.columnIndex="4" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="руб." GridPane.columnIndex="4" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="коп." GridPane.columnIndex="6" GridPane.rowIndex="0">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="коп." GridPane.columnIndex="6" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="коп." GridPane.columnIndex="6" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <TextField prefWidth="145.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <TextField GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                        <TextField GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                    </children>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </GridPane>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" text="Сохранить">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#exit" text="Отмена" />
+            </children></HBox>
+    </bottom>
+
+</BorderPane>
