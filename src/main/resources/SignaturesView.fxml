@@ -21,27 +21,27 @@
                   <Group layoutX="9.0" layoutY="50.0">
                      <children>
                         <Label text="Заведующий производством" />
-                        <TextField layoutY="20.0" />
+                        <TextField fx:id="zavPod" layoutY="20.0" />
                         <Label layoutX="51.0" layoutY="54.0" text="(подпись)" />
-                        <TextField layoutX="206.0" layoutY="20.0" prefHeight="26.0" prefWidth="236.0" />
+                        <TextField fx:id="zavTransc" layoutX="206.0" layoutY="20.0" prefHeight="26.0" prefWidth="236.0" />
                         <Label layoutX="241.0" layoutY="54.0" text="(расшифровка подписи)" />
                      </children>
                   </Group>
                   <Group layoutX="10.0" layoutY="133.0">
                      <children>
                         <Label text="Марочница" />
-                        <TextField layoutY="23.0" />
+                        <TextField fx:id="marPod" layoutY="23.0" />
                         <Label layoutX="51.0" layoutY="56.0" text="(подпись)" />
-                        <TextField layoutX="207.0" layoutY="23.0" prefHeight="26.0" prefWidth="236.0" />
+                        <TextField fx:id="marTransc" layoutX="207.0" layoutY="23.0" prefHeight="26.0" prefWidth="236.0" />
                         <Label layoutX="242.0" layoutY="56.0" text="(расшифровка подписи)" />
                      </children>
                   </Group>
                   <Group layoutX="9.0" layoutY="213.0">
                      <children>
                         <Label text="Бухгалтер" />
-                        <TextField layoutY="25.0" />
+                        <TextField fx:id="buhPod" layoutY="25.0" />
                         <Label layoutX="51.0" layoutY="56.0" text="(подпись)" />
-                        <TextField layoutX="207.0" layoutY="25.0" prefHeight="26.0" prefWidth="236.0" />
+                        <TextField fx:id="buhTransc" layoutX="207.0" layoutY="25.0" prefHeight="26.0" prefWidth="236.0" />
                         <Label layoutX="242.0" layoutY="56.0" text="(расшифровка подписи)" />
                      </children>
                   </Group>
@@ -50,25 +50,25 @@
             <Group layoutX="14.0" layoutY="10.0">
                <children>
                   <Label layoutY="8.0" text="Руководитель организации" />
-                  <TextField layoutY="64.0" />
+                  <TextField fx:id="rukPod" layoutY="64.0" />
                   <Label layoutX="51.0" layoutY="94.0" text="(подпись)" />
                   <ComboBox fx:id="positionComboBox" editable="true" layoutX="293.0" layoutY="3.0" prefWidth="150.0" />
                   <Label layoutX="325.0" layoutY="41.0" text="(должность)" />
-                  <TextField layoutX="207.0" layoutY="64.0" prefHeight="26.0" prefWidth="236.0" />
+                  <TextField fx:id="rukTransc" layoutX="207.0" layoutY="64.0" prefHeight="26.0" prefWidth="236.0" />
                   <Label layoutX="242.0" layoutY="94.0" text="(расшифровка подписи)" />
                </children>
             </Group>
             <Group layoutX="14.0" layoutY="462.0">
                <children>
                   <Label text="Кассир" />
-                  <TextField layoutY="25.0" />
+                  <TextField fx:id="casPod" layoutY="25.0" />
                   <Label layoutX="51.0" layoutY="53.0" text="(подпись)" />
-                  <TextField layoutX="207.0" layoutY="25.0" prefHeight="26.0" prefWidth="236.0" />
+                  <TextField fx:id="casTransc" layoutX="207.0" layoutY="25.0" prefHeight="26.0" prefWidth="236.0" />
                   <Label layoutX="242.0" layoutY="53.0" text="(расшифровка подписи)" />
                </children>
             </Group>
-            <Button layoutX="271.0" layoutY="559.0" mnemonicParsing="false" text="Сохранить" />
-            <Button layoutX="374.0" layoutY="559.0" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="83.0" text="Отмена" />
+            <Button layoutX="298.0" layoutY="559.0" mnemonicParsing="false" onAction="#saveAndExit" text="Сохранить" />
+            <Button layoutX="396.0" layoutY="559.0" mnemonicParsing="false" onAction="#exit" text="Отмена" />
          </children>
       </AnchorPane>
    </center>
