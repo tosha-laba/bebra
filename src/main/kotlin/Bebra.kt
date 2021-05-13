@@ -1,6 +1,7 @@
 import com.ibm.icu.text.RuleBasedNumberFormat
 import javafx.scene.control.*
 import javafx.scene.layout.BorderPane
+import javafx.stage.FileChooser
 import javafx.util.Callback
 import javafx.util.converter.BigDecimalStringConverter
 import javafx.util.converter.IntegerStringConverter
@@ -65,6 +66,8 @@ class BebraView : View("Унифицированная форма N ОП-10") {
     private val totalRefKop: TextField by fxid()
 
     init {
+        actNumberField.text = "1"
+
         specPer.text = "0"
         saltPer.text = "0"
 
@@ -278,25 +281,25 @@ class BebraView : View("Унифицированная форма N ОП-10") {
 
     private val product = object {
         private val entries = listOf(
-            "Test 1" to "030",
-            "Test 2" to "322",
-            "Test 3" to "451",
-            "Test 4" to "671",
+            "Пирожное \"Картошка\"" to "030",
+            "Салат \"Зимний\"" to "322",
+            "Котлета \"По-киевски\"" to "451",
+            "Икра \"Заморская\"" to "671",
         )
 
         val namesToSellPrice = listOf(
-            "Test 1" to 10,
-            "Test 2" to 20,
-            "Test 3" to 30,
-            "Test 4" to 40,
+            "Пирожное \"Картошка\"" to 10,
+            "Салат \"Зимний\"" to 20,
+            "Котлета \"По-киевски\"" to 30,
+            "Икра \"Заморская\"" to 40,
         ).associate { it.first to it.second.toBigDecimal() }
 
 
         val namesToProdPrice = listOf(
-            "Test 1" to 5,
-            "Test 2" to 10,
-            "Test 3" to 15,
-            "Test 4" to 20,
+            "Пирожное \"Картошка\"" to 5,
+            "Салат \"Зимний\"" to 10,
+            "Котлета \"По-киевски\"" to 15,
+            "Икра \"Заморская\"" to 20,
         ).associate { it.first to it.second.toBigDecimal() }
 
         val entriesMap = entries.toMap()
@@ -527,7 +530,7 @@ class BebraView : View("Унифицированная форма N ОП-10") {
 
         // Заполнение приложения
         sheet.getRow(79).getCell(8).setCellValue(naklad.text)
-        sheet.getRow(81).getCell(11).setCellValue(naklad.text)
+        sheet.getRow(81).getCell(11).setCellValue(zabor.text)
 
         // Заполнение справки и прочего
         sheet.getRow(61).getCell(21).setCellValue(specPer.text)
@@ -680,8 +683,12 @@ class BebraView : View("Унифицированная форма N ОП-10") {
         sheet.getRow(54).getCell(62).setCellValue(allItems.totalSum.toString())
         sheet.getRow(54).getCell(71).setCellValue(allItems.productionSum.toString())
 
-        with(FileOutputStream("bebrus.xls")) {
-            workbook.write(this)
+        chooseFile(
+            "Экспорт в Excel - сохранить как...",
+            filters = arrayOf(FileChooser.ExtensionFilter("Excel / Calc", "*.xls")),
+            mode = FileChooserMode.Save
+        ).firstOrNull()?.let {
+            workbook.write(FileOutputStream(it))
         }
     }
 }
@@ -764,7 +771,6 @@ class SignaturesView(private val bebra: BebraView) : View("Расшифровк�
         bebra.casTransc = casTransc.text
 
         bebra.rukPos = positionComboBox.value
-        println(bebra.rukPos)
 
         close()
     }

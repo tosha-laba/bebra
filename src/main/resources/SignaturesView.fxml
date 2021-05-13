@@ -52,8 +52,8 @@
                   <Label layoutY="8.0" text="Руководитель организации" />
                   <TextField fx:id="rukPod" layoutY="64.0" />
                   <Label layoutX="51.0" layoutY="94.0" text="(подпись)" />
-                  <ComboBox fx:id="positionComboBox" editable="true" layoutX="293.0" layoutY="3.0" prefWidth="150.0" />
-                  <Label layoutX="325.0" layoutY="41.0" text="(должность)" />
+                  <ComboBox fx:id="positionComboBox" editable="true" layoutX="200.0" layoutY="3.0" prefHeight="26.0" prefWidth="246.0" />
+                  <Label layoutX="282.0" layoutY="41.0" text="(должность)" />
                   <TextField fx:id="rukTransc" layoutX="207.0" layoutY="64.0" prefHeight="26.0" prefWidth="236.0" />
                   <Label layoutX="242.0" layoutY="94.0" text="(расшифровка подписи)" />
                </children>
